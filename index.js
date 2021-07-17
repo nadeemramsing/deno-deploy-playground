@@ -1,4 +1,4 @@
-import { Application, Router, renderToString } from './deps.js'
+import { Application, Router, render } from './deps.js'
 import home from "./pages/home.jsx"
 
 const router = new Router();
@@ -13,7 +13,7 @@ router.get("/hello", (ctx) => {
 
 router.get("/", (ctx) => {
   ctx.response.headers.set("content-type", "text/html; charset=utf-8");
-  ctx.response.body = renderToString(home());
+  ctx.response.body = render(home());
 })
 
 const app = new Application();
