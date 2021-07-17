@@ -21,6 +21,9 @@ const app = new Application();
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-console.log('Env. var.:', Deno.env.toObject());
-
 addEventListener("fetch", app.fetchEventHandler());
+
+if (!Deno.env.get('DENO_DEPLOYMENT_ID')) {
+  console.log('Server listening on port 8000.');
+  await app.listen({ port: 8000 });
+}
