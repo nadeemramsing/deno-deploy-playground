@@ -1,3 +1,5 @@
+import { h } from './../deps.js';
+
 export default function () {
   return (
     <html>

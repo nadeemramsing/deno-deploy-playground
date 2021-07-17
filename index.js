@@ -1,4 +1,4 @@
-import { Application, Router, renderToString } from './dep.js'
+import { Application, Router, renderToString } from './deps.js'
 import home from "./pages/home.jsx"
 
 const router = new Router();
