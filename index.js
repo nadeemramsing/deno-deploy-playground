@@ -21,7 +21,3 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 
 addEventListener("fetch", app.fetchEventHandler());
-
-console.log('Deno is listening on port 8000');
-
-await app.listen({ port: 8000 });
