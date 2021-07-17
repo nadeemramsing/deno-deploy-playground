@@ -12,6 +12,7 @@ router.get("/hello", (ctx) => {
 })
 
 router.get("/", (ctx) => {
+  ctx.response.headers = { "content-type": "text/html; charset=utf-8" }
   ctx.response.body = renderToString(home());
 })
 
