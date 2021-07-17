@@ -1,4 +1,4 @@
-import { Application, ReactDOMServer, Router } from './dep.js'
+import { Application, Router, renderToString } from './dep.js'
 import home from "./pages/home.jsx"
 
 const router = new Router();
@@ -12,7 +12,7 @@ router.get("/hello", (ctx) => {
 })
 
 router.get("/", (ctx) => {
-  ctx.response.body = ReactDOMServer.renderToString(home());
+  ctx.response.body = renderToString(home());
 })
 
 const app = new Application();
@@ -21,3 +21,5 @@ app.use(router.routes());
 app.use(router.allowedMethods());
 
 addEventListener("fetch", app.fetchEventHandler());
+
+await app.listen({ port: 8000 });

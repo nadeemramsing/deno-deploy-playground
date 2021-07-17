@@ -1,5 +1,6 @@
-import ReactDOMServer from 'https://jspm.dev/react-dom@16.14.0/server';
+import { h } from "https://x.lcas.dev/preact@10.5.12/mod.js";
+import { renderToString } from "https://x.lcas.dev/preact@10.5.12/ssr.js";
 
 export { Application, Router } from "https://deno.land/x/oak/mod.ts";
 
-export { ReactDOMServer }
+export { renderToString }
