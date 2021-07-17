@@ -21,6 +21,6 @@ const app = new Application();
 app.use(router.routes());
 app.use(router.allowedMethods());
 
-addEventListener("fetch", app.fetchEventHandler());
+console.log('Env. var.:', Deno.env.toObject());
 
-await app.listen({ port: 8000 });
+addEventListener("fetch", app.fetchEventHandler());

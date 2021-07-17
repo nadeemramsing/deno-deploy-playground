@@ -1,5 +1,3 @@
-import React from "https://jspm.dev/react@16.14.0";
-
 export default function () {
   return (
     <html>
